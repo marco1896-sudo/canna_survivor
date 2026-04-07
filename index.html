@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#040a04">
+    <title>Canna Survivors</title>
+
+    <!-- Orbitron font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%; height: 100%;
+            overflow: hidden;
+            background: #040a04;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* Mobile essentials */
+            touch-action: none;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior: none;
+        }
+
+        #gameCanvas {
+            display: block;
+            touch-action: none;
+            /* Ensure canvas fills available space with correct ratio */
+            max-width: 100vw;
+            max-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- ===== UTILS ===== -->
+    <script src="src/utils/math.js"></script>
+    <script src="src/utils/draw.js"></script>
+    <script src="src/utils/pool.js"></script>
+
+    <!-- ===== CORE ===== -->
+    <script src="src/core/GameLoop.js"></script>
+    <script src="src/core/InputManager.js"></script>
+    <script src="src/core/Camera.js"></script>
+
+    <!-- ===== DATA ===== -->
+    <script src="src/data/weapons.js"></script>
+    <script src="src/data/enemies.js"></script>
+    <script src="src/data/upgrades.js"></script>
+    <script src="src/data/waves.js"></script>
+
+    <!-- ===== BASIS-ENTITÄTEN ===== -->
+    <script src="src/entities/Projectile.js"></script>
+    <script src="src/entities/XPOrb.js"></script>
+    <script src="src/entities/Enemy.js"></script>
+
+    <!-- ===== GEGNERTYPEN ===== -->
+    <script src="src/entities/enemies/SporeCrawler.js"></script>
+    <script src="src/entities/enemies/BulbBrute.js"></script>
+    <script src="src/entities/enemies/PetalShooter.js"></script>
+    <script src="src/entities/enemies/MycoSpawner.js"></script>
+    <script src="src/entities/enemies/VineStrider.js"></script>
+    <script src="src/entities/enemies/GasPod.js"></script>
+    <script src="src/entities/enemies/RootGolem.js"></script>
+
+    <!-- ===== WAFFEN ===== -->
+    <script src="src/weapons/WeaponBase.js"></script>
+    <script src="src/weapons/PollenBurst.js"></script>
+    <script src="src/weapons/TrichomeWhip.js"></script>
+    <script src="src/weapons/ResinGrenade.js"></script>
+    <script src="src/weapons/SporeCloud.js"></script>
+    <script src="src/weapons/MyceliumTentacle.js"></script>
+    <script src="src/weapons/THCLaser.js"></script>
+    <script src="src/weapons/CBDShieldPulse.js"></script>
+    <script src="src/weapons/TerpeneSpray.js"></script>
+    <script src="src/weapons/RootSnare.js"></script>
+
+    <!-- ===== SPIELER ===== -->
+    <script src="src/entities/Player.js"></script>
+
+    <!-- ===== SYSTEME ===== -->
+    <script src="src/systems/ParticleSystem.js"></script>
+    <script src="src/systems/AudioSystem.js"></script>
+    <script src="src/systems/SpawnSystem.js"></script>
+    <script src="src/systems/UpgradeSystem.js"></script>
+
+    <!-- ===== UI ===== -->
+    <script src="src/ui/HUD.js"></script>
+    <script src="src/ui/LevelUpScreen.js"></script>
+    <script src="src/ui/TitleScreen.js"></script>
+    <script src="src/ui/GameOverScreen.js"></script>
+    <script src="src/ui/ResearchLab.js"></script>
+
+    <!-- ===== MAIN ===== -->
+    <script src="src/main.js"></script>
+
+</body>
+</html>
